@@ -63,6 +63,18 @@ export default function Home() {
           <a href="https://medium.com/lenny-for-your-thoughts/the-devopsification-of-security-e62604203adc" target="_blank" rel="noopener noreferrer">
             The DevOpsification of Security
           </a>
+          <a href="https://medium.com/lenny-for-your-thoughts/when-10x-better-isn-t-enough-building-technical-products-that-win-2ef2c642c9a2">
+            When 10x Better isn't Enough: Building Technical Products that Win
+          </a>
+          <a href="https://medium.com/lenny-for-your-thoughts/market-makers-surfers-and-10x-ers-a-model-for-investing-in-enterprise-it-726782affe76">
+            Market Makers, Surfers, and 10xers: A Model for Investing in Enterprise IT
+          </a>
+          <a href="https://medium.com/lenny-for-your-thoughts/the-most-important-saas-metric-nobody-talks-about-time-to-value-ttv-40815bd16196">
+            The Most Important SaaS Metric Nobody Talks about: Time-to-Value
+          </a>
+          <a href="https://medium.com/lenny-for-your-thoughts/the-developer-driven-economy-how-the-developer-has-become-the-organization-s-most-influential-d74ed11207b">
+            The Developer Driven Economy: How the Developer Has Become the Organization's Most Influential Employee
+          </a>
         </div>
       </div>
     </main>
