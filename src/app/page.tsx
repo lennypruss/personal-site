@@ -60,6 +60,9 @@ export default function Home() {
           <a href="https://medium.com/lenny-for-your-thoughts/infrastructure-3-0-building-blocks-for-the-ai-revolution-f141d55b4202" target="_blank" rel="noopener noreferrer">
             Infrastructure 3.0: Building Blocks for the AI Revolution
           </a>
+          <a href="https://medium.com/lenny-for-your-thoughts/the-devopsification-of-security-e62604203adc" target="_blank" rel="noopener noreferrer">
+            The DevOpsification of Security
+          </a>
         </div>
       </div>
     </main>
