@@ -37,7 +37,7 @@ export default function Home() {
       </div>
       
       <div className="blog-section">
-        <h2>blog posts</h2>
+        <h2 className="underline">writing</h2>
         <div className="blog-links">
           <a href="https://www.amplifypartners.com/blog-posts/how-skiplabs-is-building-react-for-the-backend" target="_blank" rel="noopener noreferrer">
             How SkipLabs is building React for the backend
