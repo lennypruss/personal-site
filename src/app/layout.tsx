@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Lenny Pruss",
-  description: "Early Stage Investor",
+  description: "Personal website of Lenny Pruss",
 };
 
 export default function RootLayout({

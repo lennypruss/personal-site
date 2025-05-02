@@ -22,6 +22,9 @@ body {
   font-family: ui-monospace, -apple-system-monospace, "SF Mono", monospace;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 .container {
@@ -145,4 +148,226 @@ h1 {
   50% {
     opacity: 0;
   }
+}
+
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: ui-monospace, -apple-system-monospace, "SF Mono", monospace;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125em;
+  line-height: 1.6;
+}
+
+.blog-post h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.blog-post h2 {
+  font-size: 2.1em;
+  margin: 1.5em 0 0.5em;
+}
+
+.blog-post p {
+  margin-bottom: 1em;
+}
+
+.blog-post img {
+  max-width: 50%;
+  height: auto;
+  margin: 1em auto;
+  display: block;
+}
+
+.blog-post code {
+  background: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: ui-monospace, -apple-system-monospace, "SF Mono", monospace;
+}
+
+.blog-post pre {
+  background: #f5f5f5;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+.blog-post pre code {
+  background: none;
+  padding: 0;
+}
+
+.blog-post blockquote {
+  border-left: 4px solid #ddd;
+  margin: 1em 0;
+  padding-left: 1em;
+  color: #666;
+}
+
+.blog-post ul,
+.blog-post ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+.blog-post li {
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .blog-post {
+    padding: 1rem;
+  }
+  
+  .blog-post h1 {
+    font-size: 2rem;
+  }
+  
+  .blog-post h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Blog Layout Styles */
+.blog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  color: black;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.blog-container.dark-mode {
+  background: black;
+  color: white;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.blog-home-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+.blog-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+  font-size: 0.75em;
+}
+
+.blog-content h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.blog-content h2 {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+.blog-content p {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+
+.blog-content a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.blog-content a:hover {
+  opacity: 0.8;
+}
+
+.error-container, .not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-container button, .not-found-container button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 1px solid currentColor;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.error-container button:hover, .not-found-container button:hover {
+  opacity: 0.8;
+}
+
+/* Blog specific variables */
+.blog-container {
+  --blog-foreground-rgb: 0, 0, 0;
+  --blog-background-rgb: 255, 255, 255;
+  --blog-description-color: #666;
+}
+
+.blog-container.dark-mode {
+  --blog-foreground-rgb: 255, 255, 255;
+  --blog-background-rgb: 0, 0, 0;
+  --blog-description-color: #888;
+}
+
+/* Blog Page Styles */
+.blog-page {
+  background: white;
+  color: black;
+  min-height: 100vh;
+  font-family: ui-monospace, -apple-system-monospace, "SF Mono", monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+.blog-header {
+  padding: 1.5rem;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.blog-home-link {
+  color: black;
+  text-decoration: none;
+}
+
+.blog-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
 }

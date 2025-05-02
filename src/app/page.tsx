@@ -39,6 +39,9 @@ export default function Home() {
       <div className="blog-section">
         <h2 className="underline">writing</h2>
         <div className="blog-links">
+          <a href="/blog/the-sdlc-for-agents">
+            The Agent-First Developer Toolchain: How AI will Radically Transform the SDLC
+          </a>
           <a href="https://www.amplifypartners.com/blog-posts/how-skiplabs-is-building-react-for-the-backend" target="_blank" rel="noopener noreferrer">
             How SkipLabs is building React for the backend
           </a>
