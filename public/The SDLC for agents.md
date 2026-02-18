@@ -6,7 +6,7 @@ LLMs excel at programming because code is a structured, (mostly) deterministic l
 
 Yet despite their raw capabilities, today’s LLMs haven’t drastically transformed software engineering; instead, they’ve been largely *bolted on* to yesterday’s tools and workflows, resulting in a shift that’s been more *evolutionary* in nature than *revolutionary*. Proverbially, it’s as if we’ve strapped a jet engine to a horse and buggy—a radical augmentation that is fundamentally limited by an outdated foundation.
 
-![][image1]
+![SDLC for Agents](/agent-sdlc-image.png)
 
 The platform shift is still very much on the horizon and will arrive once autonomous AI agents replace human developers at scale. This shift won’t be just an acceleration of existing paradigms; it will be a wholesale redefinition of how software is built. 
 

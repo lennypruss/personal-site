@@ -1,9 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  // Force new deployment
-}
+const nextConfig = {}
 
-module.exports = nextConfig 
+module.exports = nextConfig

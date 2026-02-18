@@ -4,6 +4,14 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://lennypruss.com'),
   title: "Lenny Pruss",
   description: "Early stage investor focused on developer tools, infrastructure, and AI.",
+  authors: [{ name: "Lenny Pruss" }],
+  keywords: ["venture capital", "developer tools", "infrastructure", "AI", "early stage investing"],
+  icons: {
+    icon: "/favicon.ico",
+  },
+  other: {
+    "theme-color": "#000000",
+  },
   openGraph: {
     title: "Lenny Pruss",
     description: "Early stage investor focused on developer tools, infrastructure, and AI.",

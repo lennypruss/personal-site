@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
-
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 0, 0, 0;
@@ -42,6 +40,7 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
+    overflow-y: auto;
   }
 }
 
@@ -52,14 +51,15 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1.25rem;
   padding: 0.5rem;
   border-radius: 9999px;
-  transition: background-color 0.2s ease;
+  color: rgb(var(--foreground-rgb));
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
 }
 
 .theme-toggle:hover {
-  background-color: rgba(var(--foreground-rgb), 0.1);
+  opacity: 0.7;
 }
 
 h1 {
@@ -150,6 +150,38 @@ h1 {
   }
 }
 
+/* Investments Section */
+.investments-section {
+  margin-top: 2rem;
+}
+
+.investments-section h2 {
+  font-size: 0.75rem;
+  color: var(--description-color);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.investments-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+}
+
+.investment-item {
+  color: rgb(var(--foreground-rgb));
+  text-decoration: none;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  line-height: 1.4;
+}
+
+.investment-item:hover {
+  opacity: 1;
+}
+
+/* Blog Post Styles */
 .blog-post {
   max-width: 800px;
   margin: 0 auto;
@@ -222,31 +254,23 @@ h1 {
   .blog-post {
     padding: 1rem;
   }
-  
+
   .blog-post h1 {
     font-size: 2rem;
   }
-  
+
   .blog-post h2 {
     font-size: 1.5rem;
   }
 }
 
 /* Blog Layout Styles */
-.blog-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+.blog-page {
   background: white;
   color: black;
   min-height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.blog-container.dark-mode {
-  background: black;
-  color: white;
+  font-family: ui-monospace, -apple-system-monospace, "SF Mono", monospace;
+  -webkit-font-smoothing: antialiased;
 }
 
 .blog-header {
@@ -254,24 +278,25 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+  padding: 1.5rem;
 }
 
 .blog-home-link {
   text-decoration: none;
-  color: inherit;
+  color: black;
 }
 
 .blog-title {
   font-size: 1.5rem;
+  font-weight: 400;
   margin: 0;
-  font-weight: normal;
+  letter-spacing: -0.025em;
 }
 
 .blog-content {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1.5rem 2rem;
-  font-size: 0.75em;
 }
 
 .blog-content h1 {
@@ -326,48 +351,4 @@ h1 {
 
 .error-container button:hover, .not-found-container button:hover {
   opacity: 0.8;
-}
-
-/* Blog specific variables */
-.blog-container {
-  --blog-foreground-rgb: 0, 0, 0;
-  --blog-background-rgb: 255, 255, 255;
-  --blog-description-color: #666;
-}
-
-.blog-container.dark-mode {
-  --blog-foreground-rgb: 255, 255, 255;
-  --blog-background-rgb: 0, 0, 0;
-  --blog-description-color: #888;
-}
-
-/* Blog Page Styles */
-.blog-page {
-  background: white;
-  color: black;
-  min-height: 100vh;
-  font-family: ui-monospace, -apple-system-monospace, "SF Mono", monospace;
-  -webkit-font-smoothing: antialiased;
-}
-
-.blog-header {
-  padding: 1.5rem;
-}
-
-.blog-title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin: 0;
-  letter-spacing: -0.025em;
-}
-
-.blog-home-link {
-  color: black;
-  text-decoration: none;
-}
-
-.blog-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1.5rem 2rem;
 }
