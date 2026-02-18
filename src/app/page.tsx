@@ -5,7 +5,7 @@ const investments = [
   { name: 'Anyscale', url: 'https://anyscale.com', logo: '/logos/anyscale.png' },
   { name: 'bitdrift', url: 'https://bitdrift.io', logo: '/logos/bitdrift.png' },
   { name: 'Chainguard', url: 'https://chainguard.dev', logo: '/logos/chainguard.png', size: 32 },
-  { name: 'Cockroach Labs', url: 'https://cockroachlabs.com', logo: '/logos/cockroachlabs.png' },
+  { name: 'Cockroach Labs', url: 'https://cockroachlabs.com', logo: '/logos/cockroachlabs.svg' },
   { name: 'Datadog', url: 'https://datadoghq.com', logo: '/logos/datadog.png', size: 32 },
   { name: 'dbt Labs', url: 'https://getdbt.com', logo: '/logos/dbtlabs.png' },
   { name: 'HashiCorp', url: 'https://hashicorp.com', logo: '/logos/hashicorp.png' },
