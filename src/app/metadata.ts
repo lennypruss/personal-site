@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Lenny Pruss" }],
   keywords: ["venture capital", "developer tools", "infrastructure", "AI", "early stage investing"],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
   },
   other: {
-    "theme-color": "#000000",
+    "theme-color": "#faf8f4",
   },
   openGraph: {
     title: "Lenny Pruss",
