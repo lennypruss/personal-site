@@ -119,13 +119,13 @@ export default function Home() {
               The DevOpsification of Security, Nov 2016
             </a>
             <a href="https://medium.com/lenny-for-your-thoughts/market-makers-surfers-and-10x-ers-a-model-for-investing-in-enterprise-it-726782affe76" target="_blank" rel="noopener noreferrer">
-              Market Makers, Surfers, and 10xers: A Model for Investing in Enterprise IT, Nov 2015
+              Market Makers, Surfers, and 10xers: A Model for Investing in Enterprise IT, Jul 2015
             </a>
             <a href="https://medium.com/lenny-for-your-thoughts/the-most-important-saas-metric-nobody-talks-about-time-to-value-ttv-40815bd16196" target="_blank" rel="noopener noreferrer">
               The Most Important SaaS Metric Nobody Talks about: Time-to-Value, Jun 2015
             </a>
             <a href="https://medium.com/lenny-for-your-thoughts/the-developer-driven-economy-how-the-developer-has-become-the-organization-s-most-influential-d74ed11207b" target="_blank" rel="noopener noreferrer">
-              The Developer Driven Economy: How the Developer Has Become the Organization&apos;s Most Influential Employee, Mar 2015
+              The Developer Driven Economy: How the Developer Has Become the Organization&apos;s Most Influential Employee, Jun 2015
             </a>
           </div>
         </div>
