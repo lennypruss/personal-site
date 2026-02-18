@@ -1,57 +1,23 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 
 const investments = [
-  { name: 'Amp', url: 'https://ampcode.com' },
-  { name: 'Antithesis', url: 'https://antithesis.com' },
-  { name: 'Anyscale', url: 'https://anyscale.com' },
-  { name: 'bitdrift', url: 'https://bitdrift.io' },
-  { name: 'Chainguard', url: 'https://chainguard.dev' },
-  { name: 'Cockroach Labs', url: 'https://cockroachlabs.com' },
-  { name: 'Datadog', url: 'https://datadoghq.com' },
-  { name: 'dbt Labs', url: 'https://getdbt.com' },
-  { name: 'HashiCorp', url: 'https://hashicorp.com' },
-  { name: 'Hightouch', url: 'https://hightouch.com' },
-  { name: 'Temporal', url: 'https://temporal.io' },
-  { name: 'TigerBeetle', url: 'https://tigerbeetle.com' },
-  { name: 'turbopuffer', url: 'https://turbopuffer.com' },
+  { name: 'Amp', url: 'https://ampcode.com', logo: '/logos/amp.svg' },
+  { name: 'Antithesis', url: 'https://antithesis.com', logo: '/logos/antithesis.png' },
+  { name: 'Anyscale', url: 'https://anyscale.com', logo: '/logos/anyscale.png' },
+  { name: 'bitdrift', url: 'https://bitdrift.io', logo: '/logos/bitdrift.png' },
+  { name: 'Chainguard', url: 'https://chainguard.dev', logo: '/logos/chainguard.png', size: 32 },
+  { name: 'Cockroach Labs', url: 'https://cockroachlabs.com', logo: '/logos/cockroachlabs.png' },
+  { name: 'Datadog', url: 'https://datadoghq.com', logo: '/logos/datadog.png', size: 32 },
+  { name: 'dbt Labs', url: 'https://getdbt.com', logo: '/logos/dbtlabs.png' },
+  { name: 'HashiCorp', url: 'https://hashicorp.com', logo: '/logos/hashicorp.png' },
+  { name: 'Hightouch', url: 'https://hightouch.com', logo: '/logos/hightouch.svg' },
+  { name: 'Temporal', url: 'https://temporal.io', logo: '/logos/temporal.png' },
+  { name: 'TigerBeetle', url: 'https://tigerbeetle.com', logo: '/logos/tigerbeetle.png' },
+  { name: 'turbopuffer', url: 'https://turbopuffer.com', logo: '/logos/turbopuffer.svg' },
 ];
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved !== null) {
-      setIsDarkMode(saved === 'dark');
-    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      setIsDarkMode(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('light-mode', !isDarkMode);
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-  }, [isDarkMode]);
-
   return (
     <main className="container">
-      <button
-        onClick={() => setIsDarkMode(!isDarkMode)}
-        className="theme-toggle"
-        aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-      >
-        {isDarkMode ? (
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-          </svg>
-        ) : (
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-          </svg>
-        )}
-      </button>
 
       <header>
         <h1>Lenny Pruss<span className="cursor">_</span></h1>
@@ -82,51 +48,96 @@ export default function Home() {
         <div className="blog-section">
           <h2 className="underline">writing</h2>
           <div className="blog-links">
-            <a href="https://www.amplifypartners.com/blog-posts/how-hightouch-built-their-long-running-agent-harness" target="_blank" rel="noopener noreferrer">
-              How Hightouch built their long-running agent harness, Jan 2026
-            </a>
-            <a href="https://www.amplifypartners.com/blog-posts/agents-are-just-workflows-really" target="_blank" rel="noopener noreferrer">
-              Agents are just workflows, really, Jul 2025
-            </a>
-            <a href="https://www.amplifypartners.com/blog-posts/the-agent-first-developer-toolchain-how-ai-will-radically-transform-the-sdlc" target="_blank" rel="noopener noreferrer">
-              The Agent-First Developer Toolchain: How AI will Radically Transform the SDLC, Apr 2025
-            </a>
-            <a href="https://www.amplifypartners.com/blog-posts/how-skiplabs-is-building-react-for-the-backend" target="_blank" rel="noopener noreferrer">
-              How SkipLabs is building React for the backend, Mar 2025
-            </a>
-            <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-bitdrift" target="_blank" rel="noopener noreferrer">
-              Our investment in bitdrift, Dec 2023
-            </a>
-            <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-tigerbeetle" target="_blank" rel="noopener noreferrer">
-              Our investment in TigerBeetle, Jan 2023
-            </a>
-            <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-chainguard" target="_blank" rel="noopener noreferrer">
-              Our investment in Chainguard, Dec 2021
-            </a>
-            <a href="https://www.amplifypartners.com/blog-posts/announcing-our-investment-in-hightouch" target="_blank" rel="noopener noreferrer">
-              Our investment in Hightouch, Jul 2021
-            </a>
-            <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-temporal" target="_blank" rel="noopener noreferrer">
-              Our investment in Temporal, Oct 2020
-            </a>
-            <a href="https://medium.com/lenny-for-your-thoughts/when-10x-better-isn-t-enough-building-technical-products-that-win-2ef2c642c9a2" target="_blank" rel="noopener noreferrer">
-              When 10x Better isn&apos;t Enough: Building Technical Products that Win, Jun 2018
-            </a>
-            <a href="https://medium.com/lenny-for-your-thoughts/infrastructure-3-0-building-blocks-for-the-ai-revolution-f141d55b4202" target="_blank" rel="noopener noreferrer">
-              Infrastructure 3.0: Building Blocks for the AI Revolution, Dec 2017
-            </a>
-            <a href="https://medium.com/lenny-for-your-thoughts/the-devopsification-of-security-e62604203adc" target="_blank" rel="noopener noreferrer">
-              The DevOpsification of Security, Nov 2016
-            </a>
-            <a href="https://medium.com/lenny-for-your-thoughts/market-makers-surfers-and-10x-ers-a-model-for-investing-in-enterprise-it-726782affe76" target="_blank" rel="noopener noreferrer">
-              Market Makers, Surfers, and 10xers: A Model for Investing in Enterprise IT, Jul 2015
-            </a>
-            <a href="https://medium.com/lenny-for-your-thoughts/the-most-important-saas-metric-nobody-talks-about-time-to-value-ttv-40815bd16196" target="_blank" rel="noopener noreferrer">
-              The Most Important SaaS Metric Nobody Talks about: Time-to-Value, Jun 2015
-            </a>
-            <a href="https://medium.com/lenny-for-your-thoughts/the-developer-driven-economy-how-the-developer-has-become-the-organization-s-most-influential-d74ed11207b" target="_blank" rel="noopener noreferrer">
-              The Developer Driven Economy: How the Developer Has Become the Organization&apos;s Most Influential Employee, Jun 2015
-            </a>
+            <div className="blog-item">
+              <a href="https://www.amplifypartners.com/blog-posts/how-hightouch-built-their-long-running-agent-harness" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                How Hightouch built their long-running agent harness
+              </a>
+              <span className="blog-item-date">Jan 2026</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://www.amplifypartners.com/blog-posts/agents-are-just-workflows-really" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                Agents are just workflows, really
+              </a>
+              <span className="blog-item-date">Jul 2025</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://www.amplifypartners.com/blog-posts/the-agent-first-developer-toolchain-how-ai-will-radically-transform-the-sdlc" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                The Agent-First Developer Toolchain: How AI will Radically Transform the SDLC
+              </a>
+              <span className="blog-item-date">Apr 2025</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://www.amplifypartners.com/blog-posts/how-skiplabs-is-building-react-for-the-backend" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                How SkipLabs is building React for the backend
+              </a>
+              <span className="blog-item-date">Mar 2025</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-bitdrift" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                Our investment in bitdrift
+              </a>
+              <span className="blog-item-date">Dec 2023</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-tigerbeetle" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                Our investment in TigerBeetle
+              </a>
+              <span className="blog-item-date">Jan 2023</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-chainguard" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                Our investment in Chainguard
+              </a>
+              <span className="blog-item-date">Dec 2021</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://www.amplifypartners.com/blog-posts/announcing-our-investment-in-hightouch" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                Our investment in Hightouch
+              </a>
+              <span className="blog-item-date">Jul 2021</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-temporal" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                Our investment in Temporal
+              </a>
+              <span className="blog-item-date">Oct 2020</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://medium.com/lenny-for-your-thoughts/when-10x-better-isn-t-enough-building-technical-products-that-win-2ef2c642c9a2" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                When 10x Better isn&apos;t Enough: Building Technical Products that Win
+              </a>
+              <span className="blog-item-date">Jun 2018</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://medium.com/lenny-for-your-thoughts/infrastructure-3-0-building-blocks-for-the-ai-revolution-f141d55b4202" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                Infrastructure 3.0: Building Blocks for the AI Revolution
+              </a>
+              <span className="blog-item-date">Dec 2017</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://medium.com/lenny-for-your-thoughts/the-devopsification-of-security-e62604203adc" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                The DevOpsification of Security
+              </a>
+              <span className="blog-item-date">Nov 2016</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://medium.com/lenny-for-your-thoughts/market-makers-surfers-and-10x-ers-a-model-for-investing-in-enterprise-it-726782affe76" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                Market Makers, Surfers, and 10xers: A Model for Investing in Enterprise IT
+              </a>
+              <span className="blog-item-date">Jul 2015</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://medium.com/lenny-for-your-thoughts/the-most-important-saas-metric-nobody-talks-about-time-to-value-ttv-40815bd16196" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                The Most Important SaaS Metric Nobody Talks about: Time-to-Value
+              </a>
+              <span className="blog-item-date">Jun 2015</span>
+            </div>
+            <div className="blog-item">
+              <a href="https://medium.com/lenny-for-your-thoughts/the-developer-driven-economy-how-the-developer-has-become-the-organization-s-most-influential-d74ed11207b" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                The Developer Driven Economy: How the Developer Has Become the Organization&apos;s Most Influential Employee
+              </a>
+              <span className="blog-item-date">Jun 2015</span>
+            </div>
           </div>
         </div>
       </section>
@@ -143,7 +154,10 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="investment-item"
               >
-                {company.name}
+                <div className="investment-logo-wrapper">
+                  <img src={company.logo} alt={company.name} className="investment-logo" style={company.size ? { width: company.size, height: company.size } : undefined} />
+                </div>
+                <span>{company.name}</span>
               </a>
             ))}
           </div>

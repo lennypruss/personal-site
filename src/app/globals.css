@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,21 +9,16 @@ html, body {
 }
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 0, 0, 0;
-  --description-color: #888;
-}
-
-:root.light-mode {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-  --description-color: #666;
+  --foreground-rgb: 28, 25, 23;
+  --background-rgb: 250, 248, 244;
+  --description-color: #78716c;
+  --muted-color: #a8a29e;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  font-family: ui-monospace, -apple-system-monospace, "SF Mono", monospace;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, "SF Mono", monospace;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -29,12 +26,13 @@ body {
 
 .container {
   text-align: left;
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
+  max-width: 700px;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 3rem 4rem;
+    padding: 4rem 4rem;
   }
 }
 
@@ -57,10 +55,10 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 1rem;
-  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
 }
 
 .description {
@@ -74,7 +72,7 @@ h1 {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .links a {
@@ -89,22 +87,27 @@ h1 {
 }
 
 .bio-link {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
 }
 
 .icon {
   display: block;
+  width: 16px;
+  height: 16px;
 }
 
+
 .blog-section {
-  margin-top: 2rem;
+  margin-top: 3.5rem;
 }
 
 .blog-section h2 {
   font-size: 0.75rem;
   color: var(--description-color);
-  margin-bottom: 1rem;
-  font-weight: 400;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .blog-links {
@@ -113,13 +116,44 @@ h1 {
   gap: 0.75rem;
 }
 
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  padding-left: 0;
+  transition: padding-left 0.15s ease;
+}
+
+.blog-item:hover {
+  padding-left: 0.5rem;
+}
+
+.blog-item-title {
+  color: rgb(var(--foreground-rgb));
+  text-decoration: none;
+  font-size: 0.8125rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.blog-item-title:hover {
+  opacity: 1;
+}
+
+.blog-item-date {
+  font-size: 0.6875rem;
+  color: var(--muted-color);
+  opacity: 0.6;
+}
+
+/* Legacy support for simple links */
 .blog-links a {
   color: rgb(var(--foreground-rgb));
   text-decoration: none;
-  font-size: 0.75rem;
-  opacity: 0.7;
+  font-size: 0.875rem;
+  opacity: 0.85;
   transition: opacity 0.2s ease;
-  line-height: 1.4;
+  line-height: 1.6;
   word-break: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
@@ -146,33 +180,68 @@ h1 {
 
 /* Investments Section */
 .investments-section {
-  margin-top: 2rem;
+  margin-top: 3.5rem;
+  padding-bottom: 5rem;
 }
 
 .investments-section h2 {
   font-size: 0.75rem;
   color: var(--description-color);
-  margin-bottom: 1rem;
-  font-weight: 400;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .investments-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem 1rem;
+}
+
+@media (max-width: 600px) {
+  .investments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .investment-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   color: rgb(var(--foreground-rgb));
   text-decoration: none;
   font-size: 0.75rem;
-  opacity: 0.7;
+  opacity: 0.85;
   transition: opacity 0.2s ease;
-  line-height: 1.4;
 }
 
 .investment-item:hover {
   opacity: 1;
+}
+
+.investment-logo-wrapper {
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.investment-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  mix-blend-mode: multiply;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.investment-item:hover .investment-logo {
+  transform: scale(1.15);
+  opacity: 0.9;
 }
 
 /* Blog Post Styles */
