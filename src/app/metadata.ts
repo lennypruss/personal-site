@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   keywords: ["venture capital", "developer tools", "infrastructure", "AI", "early stage investing"],
   icons: {
     icon: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
   },
   other: {
     "theme-color": "#faf8f4",
