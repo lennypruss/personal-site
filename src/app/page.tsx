@@ -83,49 +83,49 @@ export default function Home() {
           <h2 className="underline">writing</h2>
           <div className="blog-links">
             <a href="https://www.amplifypartners.com/blog-posts/how-hightouch-built-their-long-running-agent-harness" target="_blank" rel="noopener noreferrer">
-              How Hightouch built their long-running agent harness
+              How Hightouch built their long-running agent harness, Jan 2026
             </a>
             <a href="https://www.amplifypartners.com/blog-posts/agents-are-just-workflows-really" target="_blank" rel="noopener noreferrer">
-              Agents are just workflows, really
+              Agents are just workflows, really, Jul 2025
             </a>
             <a href="https://www.amplifypartners.com/blog-posts/the-agent-first-developer-toolchain-how-ai-will-radically-transform-the-sdlc" target="_blank" rel="noopener noreferrer">
-              The Agent-First Developer Toolchain: How AI will Radically Transform the SDLC
+              The Agent-First Developer Toolchain: How AI will Radically Transform the SDLC, Apr 2025
             </a>
             <a href="https://www.amplifypartners.com/blog-posts/how-skiplabs-is-building-react-for-the-backend" target="_blank" rel="noopener noreferrer">
-              How SkipLabs is building React for the backend
+              How SkipLabs is building React for the backend, Mar 2025
             </a>
             <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-bitdrift" target="_blank" rel="noopener noreferrer">
-              Our investment in bitdrift
+              Our investment in bitdrift, Dec 2023
             </a>
             <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-tigerbeetle" target="_blank" rel="noopener noreferrer">
-              Our investment in TigerBeetle
+              Our investment in TigerBeetle, Jan 2023
             </a>
             <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-chainguard" target="_blank" rel="noopener noreferrer">
-              Our investment in Chainguard
+              Our investment in Chainguard, Dec 2021
             </a>
             <a href="https://www.amplifypartners.com/blog-posts/announcing-our-investment-in-hightouch" target="_blank" rel="noopener noreferrer">
-              Our investment in Hightouch
+              Our investment in Hightouch, Jul 2021
             </a>
             <a href="https://www.amplifypartners.com/blog-posts/our-investment-in-temporal" target="_blank" rel="noopener noreferrer">
-              Our investment in Temporal
-            </a>
-            <a href="https://medium.com/lenny-for-your-thoughts/infrastructure-3-0-building-blocks-for-the-ai-revolution-f141d55b4202" target="_blank" rel="noopener noreferrer">
-              Infrastructure 3.0: Building Blocks for the AI Revolution
-            </a>
-            <a href="https://medium.com/lenny-for-your-thoughts/the-devopsification-of-security-e62604203adc" target="_blank" rel="noopener noreferrer">
-              The DevOpsification of Security
+              Our investment in Temporal, Oct 2020
             </a>
             <a href="https://medium.com/lenny-for-your-thoughts/when-10x-better-isn-t-enough-building-technical-products-that-win-2ef2c642c9a2" target="_blank" rel="noopener noreferrer">
-              When 10x Better isn&apos;t Enough: Building Technical Products that Win
+              When 10x Better isn&apos;t Enough: Building Technical Products that Win, Jun 2018
+            </a>
+            <a href="https://medium.com/lenny-for-your-thoughts/infrastructure-3-0-building-blocks-for-the-ai-revolution-f141d55b4202" target="_blank" rel="noopener noreferrer">
+              Infrastructure 3.0: Building Blocks for the AI Revolution, Dec 2017
+            </a>
+            <a href="https://medium.com/lenny-for-your-thoughts/the-devopsification-of-security-e62604203adc" target="_blank" rel="noopener noreferrer">
+              The DevOpsification of Security, Nov 2016
             </a>
             <a href="https://medium.com/lenny-for-your-thoughts/market-makers-surfers-and-10x-ers-a-model-for-investing-in-enterprise-it-726782affe76" target="_blank" rel="noopener noreferrer">
-              Market Makers, Surfers, and 10xers: A Model for Investing in Enterprise IT
+              Market Makers, Surfers, and 10xers: A Model for Investing in Enterprise IT, Nov 2015
             </a>
             <a href="https://medium.com/lenny-for-your-thoughts/the-most-important-saas-metric-nobody-talks-about-time-to-value-ttv-40815bd16196" target="_blank" rel="noopener noreferrer">
-              The Most Important SaaS Metric Nobody Talks about: Time-to-Value
+              The Most Important SaaS Metric Nobody Talks about: Time-to-Value, Jun 2015
             </a>
             <a href="https://medium.com/lenny-for-your-thoughts/the-developer-driven-economy-how-the-developer-has-become-the-organization-s-most-influential-d74ed11207b" target="_blank" rel="noopener noreferrer">
-              The Developer Driven Economy: How the Developer Has Become the Organization&apos;s Most Influential Employee
+              The Developer Driven Economy: How the Developer Has Become the Organization&apos;s Most Influential Employee, Mar 2015
             </a>
           </div>
         </div>
