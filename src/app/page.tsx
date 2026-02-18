@@ -82,8 +82,11 @@ export default function Home() {
         <div className="blog-section">
           <h2 className="underline">writing</h2>
           <div className="blog-links">
-            <a href="/blog/the-sdlc-for-agents">
+            <a href="https://www.amplifypartners.com/blog-posts/the-agent-first-developer-toolchain-how-ai-will-radically-transform-the-sdlc" target="_blank" rel="noopener noreferrer">
               The Agent-First Developer Toolchain: How AI will Radically Transform the SDLC
+            </a>
+            <a href="https://www.amplifypartners.com/blog-posts/how-hightouch-built-their-long-running-agent-harness" target="_blank" rel="noopener noreferrer">
+              How Hightouch built their long-running agent harness
             </a>
             <a href="https://www.amplifypartners.com/blog-posts/how-skiplabs-is-building-react-for-the-backend" target="_blank" rel="noopener noreferrer">
               How SkipLabs is building React for the backend
