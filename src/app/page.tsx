@@ -88,6 +88,9 @@ export default function Home() {
             <a href="https://www.amplifypartners.com/blog-posts/how-hightouch-built-their-long-running-agent-harness" target="_blank" rel="noopener noreferrer">
               How Hightouch built their long-running agent harness
             </a>
+            <a href="https://www.amplifypartners.com/blog-posts/agents-are-just-workflows-really" target="_blank" rel="noopener noreferrer">
+              Agents are just workflows, really
+            </a>
             <a href="https://www.amplifypartners.com/blog-posts/how-skiplabs-is-building-react-for-the-backend" target="_blank" rel="noopener noreferrer">
               How SkipLabs is building React for the backend
             </a>
