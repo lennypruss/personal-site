@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   metadataBase: new URL('https://lennypruss.com'),
   title: "Lenny Pruss",
-  description: "Early stage investor focused on developer tools, infrastructure, and AI.",
+  description: "early stage investor",
   authors: [{ name: "Lenny Pruss" }],
   keywords: ["venture capital", "developer tools", "infrastructure", "AI", "early stage investing"],
   icons: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Lenny Pruss",
-    description: "Early stage investor focused on developer tools, infrastructure, and AI.",
+    description: "early stage investor",
     type: "website",
     url: "https://lennypruss.com",
     siteName: "Lenny Pruss",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Lenny Pruss",
-    description: "Early stage investor focused on developer tools, infrastructure, and AI.",
+    description: "early stage investor",
     creator: "@lennypruss",
     images: ["/profile.jpg"],
   },
