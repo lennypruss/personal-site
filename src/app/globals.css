@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: auto;
+}
+
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 0, 0, 0;
@@ -19,16 +25,15 @@ body {
   background: rgb(var(--background-rgb));
   font-family: ui-monospace, -apple-system-monospace, "SF Mono", monospace;
   -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
-  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .container {
   text-align: left;
   padding: 2rem 1.5rem;
-  min-height: 100vh;
 }
 
 @media (min-width: 768px) {
