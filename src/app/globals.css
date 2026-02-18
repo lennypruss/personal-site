@@ -100,6 +100,13 @@ h1 {
   height: 16px;
 }
 
+.amplify-icon {
+  width: auto;
+  height: 12px;
+  filter: grayscale(100%);
+}
+
+
 
 .blog-section {
   margin-top: 3.5rem;
