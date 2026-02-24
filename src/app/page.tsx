@@ -58,6 +58,12 @@ export default function Home() {
               <span className="blog-item-date">Jan 2026</span>
             </div>
             <div className="blog-item">
+              <a href="https://devinterrupted.substack.com/p/what-language-should-llms-program" target="_blank" rel="noopener noreferrer" className="blog-item-title">
+                What language should LLMs program in?
+              </a>
+              <span className="blog-item-date">Aug 2025</span>
+            </div>
+            <div className="blog-item">
               <a href="https://www.amplifypartners.com/blog-posts/agents-are-just-workflows-really" target="_blank" rel="noopener noreferrer" className="blog-item-title">
                 Agents are just workflows, really
               </a>
