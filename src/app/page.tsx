@@ -2,7 +2,7 @@
 const HIDE_INVESTMENT_POSTS = false;
 
 const blogPosts = [
-  { title: 'One(ish) year later: The Agent-first developer toolchain', url: 'https://www.amplifypartners.com/blog-posts/one-ish-year-later-the-agent-first-developer-toolchain', date: 'Feb 2026' },
+  { title: 'One(ish) Year Later: The Agent-First Developer Toolchain', url: 'https://www.amplifypartners.com/blog-posts/one-ish-year-later-the-agent-first-developer-toolchain', date: 'Feb 2026' },
   { title: 'How Hightouch built their long-running agent harness', url: 'https://www.amplifypartners.com/blog-posts/how-hightouch-built-their-long-running-agent-harness', date: 'Jan 2026' },
   { title: 'What language should LLMs program in?', url: 'https://devinterrupted.substack.com/p/what-language-should-llms-program', date: 'Aug 2025' },
   { title: 'Agents are just workflows, really', url: 'https://www.amplifypartners.com/blog-posts/agents-are-just-workflows-really', date: 'Jul 2025' },
