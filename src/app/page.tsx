@@ -1,7 +1,9 @@
+import { WritingSection } from "./WritingSection";
 
 const HIDE_INVESTMENT_POSTS = false;
 
 const blogPosts = [
+  { title: 'exe.dev and the perfect little computer', url: 'https://www.amplifypartners.com/blog-posts/exe-dev-and-the-perfect-little-computer', date: 'Apr 2026' },
   { title: 'One(ish) Year Later: The Agent-First Developer Toolchain', url: 'https://www.amplifypartners.com/blog-posts/one-ish-year-later-the-agent-first-developer-toolchain', date: 'Feb 2026' },
   { title: 'How Hightouch built their long-running agent harness', url: 'https://www.amplifypartners.com/blog-posts/how-hightouch-built-their-long-running-agent-harness', date: 'Jan 2026' },
   { title: 'What language should LLMs program in?', url: 'https://devinterrupted.substack.com/p/what-language-should-llms-program', date: 'Aug 2025' },
@@ -30,6 +32,7 @@ const investments = [
   { name: 'Cockroach Labs', url: 'https://cockroachlabs.com', logo: '/logos/cockroachlabs.svg' },
   { name: 'Datadog', url: 'https://datadoghq.com', logo: '/logos/datadog.png', size: 32 },
   { name: 'dbt Labs', url: 'https://getdbt.com', logo: '/logos/dbtlabs.png' },
+  { name: 'exe.dev', url: 'https://exe.dev', logo: '/logos/exy.png' },
   { name: 'HashiCorp', url: 'https://hashicorp.com', logo: '/logos/hashicorp.png' },
   { name: 'Hightouch', url: 'https://hightouch.com', logo: '/logos/hightouch.svg' },
   { name: 'Temporal', url: 'https://temporal.io', logo: '/logos/temporal.png' },
@@ -69,23 +72,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section aria-label="Writing">
-        <div className="blog-section">
-          <h2 className="underline">writing</h2>
-          <div className="blog-links">
-            {blogPosts
-              .filter(post => !HIDE_INVESTMENT_POSTS || !post.isInvestmentPost)
-              .map((post) => (
-                <div key={post.url} className="blog-item">
-                  <a href={post.url} target="_blank" rel="noopener noreferrer" className="blog-item-title">
-                    {post.title}
-                  </a>
-                  <span className="blog-item-date">{post.date}</span>
-                </div>
-              ))}
-          </div>
-        </div>
-      </section>
+      <WritingSection posts={blogPosts.filter(post => !HIDE_INVESTMENT_POSTS || !post.isInvestmentPost)} />
 
       <section aria-label="Select Investments">
         <div className="investments-section">
