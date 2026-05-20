@@ -3,6 +3,7 @@ import { WritingSection } from "./WritingSection";
 const HIDE_INVESTMENT_POSTS = false;
 
 const blogPosts = [
+  { title: 'Will agents like Git any more than we do?', url: 'https://www.amplifypartners.com/blog-posts/will-agents-like-git-any-more-than-we-do', date: 'May 2026' },
   { title: 'exe.dev and the perfect little computer', url: 'https://www.amplifypartners.com/blog-posts/exe-dev-and-the-perfect-little-computer', date: 'Apr 2026' },
   { title: 'One(ish) Year Later: The Agent-First Developer Toolchain', url: 'https://www.amplifypartners.com/blog-posts/one-ish-year-later-the-agent-first-developer-toolchain', date: 'Feb 2026' },
   { title: 'How Hightouch built their long-running agent harness', url: 'https://www.amplifypartners.com/blog-posts/how-hightouch-built-their-long-running-agent-harness', date: 'Jan 2026' },
