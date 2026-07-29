@@ -37,6 +37,7 @@ const investments = [
   { name: 'exe.dev', url: 'https://exe.dev', logo: '/logos/exy.png' },
   { name: 'HashiCorp', url: 'https://hashicorp.com', logo: '/logos/hashicorp.png' },
   { name: 'Hightouch', url: 'https://hightouch.com', logo: '/logos/hightouch.svg' },
+  { name: 'Superlogical', url: 'https://superlogical.com', logo: '/logos/superlogical.png' },
   { name: 'Temporal', url: 'https://temporal.io', logo: '/logos/temporal.png' },
   { name: 'TigerBeetle', url: 'https://tigerbeetle.com', logo: '/logos/tigerbeetle.png' },
   { name: 'turbopuffer', url: 'https://turbopuffer.com', logo: '/logos/turbopuffer.svg' },
