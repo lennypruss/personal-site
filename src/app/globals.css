@@ -273,6 +273,10 @@ h1 {
   opacity: 0.9;
 }
 
+.investment-item:hover .investment-logo-wide {
+  transform: scale(1.05);
+}
+
 /* Blog Post Styles */
 .blog-post {
   max-width: 800px;
