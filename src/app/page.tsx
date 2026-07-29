@@ -37,7 +37,7 @@ const investments = [
   { name: 'exe.dev', url: 'https://exe.dev', logo: '/logos/exy.png' },
   { name: 'HashiCorp', url: 'https://hashicorp.com', logo: '/logos/hashicorp.png' },
   { name: 'Hightouch', url: 'https://hightouch.com', logo: '/logos/hightouch.svg' },
-  { name: 'Superlogical', url: 'https://superlogical.com', logo: '/logos/superlogical.png', logoStyle: { width: 76, height: 'auto' }, wrapperStyle: { height: 'auto' }, logoClass: 'investment-logo-wide' },
+  { name: 'Superlogical', url: 'https://superlogical.com', logo: '/logos/superlogical.png', logoStyle: { width: 76, height: 14 }, logoClass: 'investment-logo-wide' },
   { name: 'Temporal', url: 'https://temporal.io', logo: '/logos/temporal.png' },
   { name: 'TigerBeetle', url: 'https://tigerbeetle.com', logo: '/logos/tigerbeetle.png' },
   { name: 'turbopuffer', url: 'https://turbopuffer.com', logo: '/logos/turbopuffer.svg' },
@@ -89,7 +89,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="investment-item"
               >
-                <div className="investment-logo-wrapper" style={company.wrapperStyle}>
+                <div className="investment-logo-wrapper">
                   <img src={company.logo} alt={company.name} className={`investment-logo${company.logoClass ? ` ${company.logoClass}` : ''}`} style={company.logoStyle ?? (company.size ? { width: company.size, height: company.size } : undefined)} />
                 </div>
                 <span>{company.name}</span>
