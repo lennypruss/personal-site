@@ -37,7 +37,7 @@ const investments = [
   { name: 'exe.dev', url: 'https://exe.dev', logo: '/logos/exy.png' },
   { name: 'HashiCorp', url: 'https://hashicorp.com', logo: '/logos/hashicorp.png' },
   { name: 'Hightouch', url: 'https://hightouch.com', logo: '/logos/hightouch.svg' },
-  { name: 'Superlogical', url: 'https://superlogical.com', logo: '/logos/superlogical.png' },
+  { name: 'Superlogical', url: 'https://superlogical.com', logo: '/logos/superlogical.png', logoStyle: { width: 64, height: 'auto' } },
   { name: 'Temporal', url: 'https://temporal.io', logo: '/logos/temporal.png' },
   { name: 'TigerBeetle', url: 'https://tigerbeetle.com', logo: '/logos/tigerbeetle.png' },
   { name: 'turbopuffer', url: 'https://turbopuffer.com', logo: '/logos/turbopuffer.svg' },
@@ -90,7 +90,7 @@ export default function Home() {
                 className="investment-item"
               >
                 <div className="investment-logo-wrapper">
-                  <img src={company.logo} alt={company.name} className="investment-logo" style={company.size ? { width: company.size, height: company.size } : undefined} />
+                  <img src={company.logo} alt={company.name} className="investment-logo" style={company.logoStyle ?? (company.size ? { width: company.size, height: company.size } : undefined)} />
                 </div>
                 <span>{company.name}</span>
               </a>
