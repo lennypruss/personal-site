@@ -1,4 +1,11 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#faf8f4' },
+    { media: '(prefers-color-scheme: dark)', color: '#131211' },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lennypruss.com'),
@@ -9,9 +16,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
     apple: "/apple-touch-icon.png",
-  },
-  other: {
-    "theme-color": "#faf8f4",
   },
   openGraph: {
     title: "Lenny Pruss",

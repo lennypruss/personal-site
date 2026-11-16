@@ -1,4 +1,6 @@
+import { execSync } from "child_process";
 import { WritingSection } from "./WritingSection";
+import { StatusLine } from "./StatusLine";
 
 const HIDE_INVESTMENT_POSTS = false;
 
@@ -43,13 +45,26 @@ const investments = [
   { name: 'turbopuffer', url: 'https://turbopuffer.com', logo: '/logos/turbopuffer.svg' },
 ];
 
+function getCommit(): string | null {
+  const fromEnv = process.env.VERCEL_GIT_COMMIT_SHA;
+  if (fromEnv) return fromEnv.slice(0, 7);
+  try {
+    return execSync("git rev-parse --short HEAD", { stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
+  } catch {
+    return null;
+  }
+}
+
 export default function Home() {
+  const posts = blogPosts.filter(post => !HIDE_INVESTMENT_POSTS || !post.isInvestmentPost);
+  const builtAt = new Date().toISOString();
+
   return (
     <main className="container">
 
       <header>
-        <h1>Lenny Pruss<span className="cursor">_</span></h1>
-        <p className="description">early stage investor</p>
+        <h1><span className="type type-name">Lenny Pruss</span><span className="cursor">_</span></h1>
+        <p className="description"><span className="type type-description">early stage investor</span></p>
         <div className="links">
           <a href="https://x.com/lennypruss" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
             <svg className="icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
@@ -75,29 +90,31 @@ export default function Home() {
         </div>
       </header>
 
-      <WritingSection posts={blogPosts.filter(post => !HIDE_INVESTMENT_POSTS || !post.isInvestmentPost)} />
+      <WritingSection posts={posts} />
 
-      <section aria-label="Select Investments">
-        <div className="investments-section">
-          <h2 className="underline">select investments</h2>
-          <div className="investments-grid">
-            {investments.map((company) => (
-              <a
-                key={company.name}
-                href={company.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="investment-item"
-              >
-                <div className="investment-logo-wrapper">
-                  <img src={company.logo} alt={company.name} className={`investment-logo${company.logoClass ? ` ${company.logoClass}` : ''}`} style={company.logoStyle ?? (company.size ? { width: company.size, height: company.size } : undefined)} />
-                </div>
-                <span>{company.name}</span>
-              </a>
-            ))}
-          </div>
+      <section aria-label="Select Investments" className="investments-section">
+        <h2 className="section-heading">
+          select investments
+        </h2>
+        <div className="investments-grid">
+          {investments.map((company) => (
+            <a
+              key={company.name}
+              href={company.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="investment-item"
+            >
+              <div className="investment-logo-wrapper">
+                <img src={company.logo} alt={company.name} className={`investment-logo${company.logoClass ? ` ${company.logoClass}` : ''}`} style={company.logoStyle ?? (company.size ? { width: company.size, height: company.size } : undefined)} />
+              </div>
+              <span>{company.name}</span>
+            </a>
+          ))}
         </div>
       </section>
+
+      <StatusLine builtAt={builtAt} commit={getCommit()} postCount={posts.length} companyCount={investments.length} />
     </main>
   );
 }
